@@ -1,5 +1,5 @@
 import React from 'react'
-import Flashcarditem from './FlashcardItem'
+import FlashcardItem from './FlashcardItem'
 
 const FlashcardBox = ({dinosaurs, removeDinosaur}) => {
     const allDinosaurs = dinosaurs.map((dinosaur) => {

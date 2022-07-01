@@ -9,4 +9,4 @@ const Buttons = ({ addDinosaur }) => {
     )
 }
 
-export default Buttons
+export default Buttons;
