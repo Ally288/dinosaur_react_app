@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Buttons = () => {
+const Buttons = ({addDinosaur}) => {
     return (
-        <div>Buttons</div>
+        <nav>
+            <button addDinosaur={addDinosaur}>Add Dinosaur</button>
+            <button>Quiz</button>
+        </nav>
     )
 } 
 
