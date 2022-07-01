@@ -6,4 +6,4 @@ const FlashcardForm = () => {
   )
 }
 
-export default FlashcardForm
+export default FlashcardForm;
