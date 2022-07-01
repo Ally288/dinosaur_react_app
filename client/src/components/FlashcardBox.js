@@ -1,16 +1,17 @@
 import React from 'react'
 import FlashcardItem from './FlashcardItem'
 
-const FlashcardBox = ({dinosaurs, removeDinosaur}) => {
+const FlashcardBox = ({ dinosaurs, removeDinosaur }) => {
     const allDinosaurs = dinosaurs.map((dinosaur) => {
-      return <FlashcardItem dinosaur={dinosaur} key={dinosaur._id} removeDinosaur={removeDinosaur}
-/>    })  ///EDIT and SHOW will pass through
+        return <FlashcardItem dinosaur={dinosaur} key={dinosaur._id} removeDinosaur={removeDinosaur}
+        />
+    })  ///EDIT and SHOW will pass through
 
 
     return (
         <>
-        <div className="dinogrid"> {allDinosaurs} </div>
-           
+            <div className="dinogrid"> {allDinosaurs} </div>
+
         </>
     )
 }
