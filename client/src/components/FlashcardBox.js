@@ -1,13 +1,18 @@
 import React from 'react'
 import Flashcarditem from './FlashcardItem'
 
-const FlashcardBox = () => {
+const FlashcardBox = ({dinosaurs, removeDinosaur}) => {
+    const allDinosaurs = dinosaurs.map((dinosaur) => {
+      return <FlashcardItem dinosaur={dinosaur} key={dinosaur._id} removeDinosaur={removeDinosaur}
+/>    })  ///EDIT and SHOW will pass through
+
+
     return (
         <>
-            <div>This is the flashcard box</div>
-            <Flashcarditem />
+        <div className="dinogrid"> {allDinosaurs} </div>
+           
         </>
     )
 }
 
-export default FlashcardBox
+export default FlashcardBox;
