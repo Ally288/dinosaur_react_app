@@ -11,7 +11,7 @@ export const postDinosaur = (payload) => {
         body: JSON.stringify(payload),
         headers: { 'Content-Type': 'application/json' }
     })
-    .then(res => res.json())
+        .then(res => res.json())
 }
 
 export const deleteDinosaur = (id) => {

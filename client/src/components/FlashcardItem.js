@@ -1,5 +1,6 @@
 import React from 'react'
 import { deleteDinosaur } from '../services/services'
+import "./FlashcardItem.css"
 
 const FlashcardItem = ({ dinosaur, removeDinosaur }) => {
 
@@ -15,7 +16,7 @@ const FlashcardItem = ({ dinosaur, removeDinosaur }) => {
 
 
   return (
-    <div>
+    <div className="dinoItem">
       <h1>{dinosaur.name}</h1>
       <h4>{dinosaur.diet}</h4>
       <h6>{dinosaur.weight}</h6>
