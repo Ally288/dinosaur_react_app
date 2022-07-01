@@ -1,9 +1,13 @@
 import React from 'react'
+import Flashcarditem from './FlashcardItem'
 
-const Flashcardbox = () => {
-  return (
-    <div>Flashcardbox</div>
-  )
+const FlashcardBox = () => {
+    return (
+        <>
+            <div>This is the flashcard box</div>
+            <Flashcarditem />
+        </>
+    )
 }
 
-export default Flashcardbox
+export default FlashcardBox

@@ -1,12 +1,13 @@
-import './App.css';
+import FlashCardGridContainer from "./containers/FlashCardGridContainer";
+import MainContainer from "./containers/MainContainer";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>BBC app</p>
-      </header>
-    </div>
+    <>
+      <MainContainer />
+      <FlashCardGridContainer />
+    </>
   );
 }
 
