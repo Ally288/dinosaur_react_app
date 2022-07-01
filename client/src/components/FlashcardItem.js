@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Flashcarditem = () => {
+const FlashcardItem = () => {
   return (
-    <div>Flashcarditem</div>
+    <div>FlashcardItem</div>
   )
 }
 
-export default Flashcarditem
+export default FlashcardItem
