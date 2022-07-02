@@ -1,8 +1,8 @@
 import React from 'react'
-import { deleteDinosaur } from '../services/services'
+import { deleteDinosaur, editDinosaur } from '../services/services'
 import "./FlashcardItem.css"
 
-const FlashcardItem = ({ dinosaur, removeDinosaur }) => {
+const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur }) => {
 
   const handleDelete = () => {
     deleteDinosaur(dinosaur._id).then(() => {
@@ -11,7 +11,9 @@ const FlashcardItem = ({ dinosaur, removeDinosaur }) => {
   }
 
   const handleEdit = () => {
-
+    editDinosaur(dinosaur._id).then(() => {
+      updateDinosaur(dinosaur._id)
+    })
   }
 
 
