@@ -1,7 +1,6 @@
 import React from 'react'
 import { deleteDinosaur, editDinosaur } from '../services/services'
 import "./FlashcardItem.css"
-import '..static/images/dinosaurs'
 
 const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur }) => {
 

@@ -29,7 +29,7 @@ const FlashCardGridContainer = () => {
 
     const temp = dinosaurs.map(d => d);
     const indexToDel = temp.map(d => d._id).indexOf(id);
-  
+
     console.log(indexToDel);
 
     temp.splice(indexToDel, 1);
@@ -59,8 +59,6 @@ const FlashCardGridContainer = () => {
       <Buttons addDinosaur={addDinosaur} setFormPopup={setFormPopup} />
       <FlashcardBox dinosaurs={dinosaurs} removeDinosaur={removeDinosaur} /> {/*PASS down EDIT and SHOW*/}
       <Popup trigger={formPopup} setTrigger={setFormPopup}>
-        <h3>My popup</h3>
-        <p> This is where the form will go</p>
         <FlashcardForm />
       </Popup>
     </>
