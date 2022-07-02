@@ -1,5 +1,4 @@
 .dinogrid {
-    background-color: blue;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
 }

@@ -1,10 +1,11 @@
 import React from 'react'
+import './Buttons.css'
 
 const Buttons = ({ addDinosaur }) => {
     return (
         <nav>
-            <button addDinosaur={addDinosaur}>Add Dinosaur</button>
-            <button>Quiz</button>
+            <button className="button" addDinosaur={addDinosaur}>Add Dinosaur</button>
+            <button className="button" >Quiz</button>
         </nav>
     )
 }
