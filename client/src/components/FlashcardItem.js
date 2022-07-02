@@ -1,6 +1,7 @@
 import React from 'react'
 import { deleteDinosaur, editDinosaur } from '../services/services'
 import "./FlashcardItem.css"
+import '..static/images/dinosaurs'
 
 const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur }) => {
 
@@ -16,7 +17,6 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur }) => {
     })
   }
 
-
   return (
     <div className="dinoItem">
       <h1>{dinosaur.name}</h1>
@@ -25,6 +25,7 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur }) => {
       <h6>{dinosaur.length}</h6>
       <h6>{dinosaur.found_in}</h6>
       <p>{dinosaur.description}</p>
+      <img src={dinosaur.image} />
       <button onClick={handleDelete}> 🗑 </button>
       <button onClick={handleEdit}> Edit</button>
 
