@@ -1,5 +1,6 @@
 import React from 'react'
 import FlashcardItem from './FlashcardItem'
+import "./FlashcardBox.css"
 
 const FlashcardBox = ({ dinosaurs, removeDinosaur }) => {
     const allDinosaurs = dinosaurs.map((dinosaur) => {
