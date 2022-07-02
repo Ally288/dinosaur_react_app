@@ -1,8 +1,9 @@
 import React from 'react'
-import { deleteDinosaur } from '../services/services'
+import { deleteDinosaur, editDinosaur } from '../services/services'
 import "./FlashcardItem.css"
+import '..static/images/dinosaurs'
 
-const FlashcardItem = ({ dinosaur, removeDinosaur }) => {
+const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur }) => {
 
   const handleDelete = () => {
     deleteDinosaur(dinosaur._id).then(() => {
@@ -11,9 +12,10 @@ const FlashcardItem = ({ dinosaur, removeDinosaur }) => {
   }
 
   const handleEdit = () => {
-
+    editDinosaur(dinosaur._id).then(() => {
+      updateDinosaur(dinosaur._id)
+    })
   }
-
 
   return (
     <div className="dinoItem">
@@ -23,6 +25,7 @@ const FlashcardItem = ({ dinosaur, removeDinosaur }) => {
       <h6>{dinosaur.length}</h6>
       <h6>{dinosaur.found_in}</h6>
       <p>{dinosaur.description}</p>
+      <img src={dinosaur.image} />
       <button onClick={handleDelete}> 🗑 </button>
       <button onClick={handleEdit}> Edit</button>
 
