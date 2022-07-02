@@ -17,13 +17,16 @@ const FlashCardGridContainer = () => {
 
   const addDinosaur = (dinosaur) => {
     const temp = dinosaurs.map(d => d);
+
     temp.push(dinosaur);
     setDinosaurs(temp);
   }
 
   const removeDinosaur = (id) => {
+
     const temp = dinosaurs.map(d => d);
     const indexToDel = temp.map(d => d._id).indexOf(id);
+  
     console.log(indexToDel);
 
     temp.splice(indexToDel, 1);
@@ -40,6 +43,7 @@ const FlashCardGridContainer = () => {
 
   }
 
+
   //Edit function goes here
 
   // const editDinosaur = (id)
@@ -52,7 +56,9 @@ const FlashCardGridContainer = () => {
     <>
       <Header />
       <Buttons addDinosaur={addDinosaur} />
+
       <FlashcardBox dinosaurs={dinosaurs} removeDinosaur={removeDinosaur} updateDinosaur={updateDinosaur}/> {/*PASS down EDIT and SHOW*/}
+
     </>
   )
 }
