@@ -27,7 +27,6 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur }) => {
       <img src={dinosaur.image} alt="dinosaur" width="120px" />
       <button onClick={handleDelete}> 🗑 </button>
       <button onClick={handleEdit}> Edit</button>
-      {console.log(dinosaur.image)}
 
     </div>
   )

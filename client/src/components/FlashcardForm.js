@@ -28,7 +28,7 @@ const FlashcardForm = ({ addDinosaur, setTrigger, setDinosaurs }) => {
     }).then(getDinosaurs().then((allDinosaurs) => {
       setDinosaurs(allDinosaurs);
     }))
-    // Reset the form input values
+    // Reset the form input values   
     setFormData({
       name: "",
       description: "",
