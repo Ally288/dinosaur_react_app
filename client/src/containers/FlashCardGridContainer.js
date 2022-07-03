@@ -59,7 +59,7 @@ const FlashCardGridContainer = () => {
       <Buttons addDinosaur={addDinosaur} setFormPopup={setFormPopup} />
       <FlashcardBox dinosaurs={dinosaurs} removeDinosaur={removeDinosaur} /> {/*PASS down EDIT and SHOW*/}
       <Popup trigger={formPopup} setTrigger={setFormPopup}>
-        <FlashcardForm setTrigger={setFormPopup} />
+        <FlashcardForm setTrigger={setFormPopup} setDinosaurs={setDinosaurs} />
       </Popup>
     </>
   )

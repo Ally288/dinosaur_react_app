@@ -17,18 +17,17 @@ export const postDinosaur = (payload) => {
 export const deleteDinosaur = (id) => {
     return fetch(baseURL + id, {
         method: 'DELETE'
-    })
-}
+    });
+};
 
 export const editDinosaur = (dinosaur) => {
     return fetch(baseURL + dinosaur._id, {
-      method: 'PUT',
-      body: JSON.stringify(dinosaur),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        method: 'PUT',
+        body: JSON.stringify(dinosaur),
+        headers: {
+            'Content-Type': 'application/json'
+        }
     })
-      .then(res => res.json());
-  }
+        .then(res => res.json());
+}
 
-  
