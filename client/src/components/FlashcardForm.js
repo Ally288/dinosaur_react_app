@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { postDinosaur } from '../services/services';
+import { getDinosaurs, postDinosaur } from '../services/services';
 
-const FlashcardForm = ({ addDinosaur }) => {
+
+
+const FlashcardForm = ({ addDinosaur, setTrigger, setDinosaurs }) => {
 
   const [formData, setFormData] = useState({
     name: "",
@@ -10,7 +12,7 @@ const FlashcardForm = ({ addDinosaur }) => {
     weight: "",
     length: "",
     found_in: "",
-    image: "An Image"
+    image: "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
   })
 
   const onChange = (e) => {
@@ -23,8 +25,10 @@ const FlashcardForm = ({ addDinosaur }) => {
     e.preventDefault();
     postDinosaur(formData).then((data) => {
       addDinosaur(data);
-    })
-    // Reset the form input values
+    }).then(getDinosaurs().then((allDinosaurs) => {
+      setDinosaurs(allDinosaurs);
+    }))
+    // Reset the form input values   
     setFormData({
       name: "",
       description: "",
@@ -34,6 +38,7 @@ const FlashcardForm = ({ addDinosaur }) => {
       found_in: "",
       image: "An Image"
     });
+    setTrigger(false);
   }
 
 
@@ -94,7 +99,7 @@ const FlashcardForm = ({ addDinosaur }) => {
           name="found_in"
           value={formData.found_in} />
       </div>
-      <div className="formWrap">
+      {/* <div className="formWrap">
         <label htmlFor="image">Image:</label>
         <input
           onChange={onChange}
@@ -102,7 +107,7 @@ const FlashcardForm = ({ addDinosaur }) => {
           id="image"
           name="image"
           value={formData.image} />
-      </div>
+      </div> */}
 
       <input type="submit" value="Save" id="save" />
     </form>
