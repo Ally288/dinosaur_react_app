@@ -10,7 +10,7 @@ db.dinosaurs.insertMany([
         "weight": "16,000 - 22,000kg",
         "length": "21.0m",
         "found_in": "USA",
-        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
+        "image": "https://static.wikia.nocookie.net/landbeforetime/images/e/e1/Littlefootoff2.png"
     },
     {
         "name": "Saurolophus",
@@ -19,7 +19,7 @@ db.dinosaurs.insertMany([
         "weight": "1,900kg",
         "length": "9.0m",
         "found_in": "Canada, Mongolia",
-        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
+        "image": "https://static.wikia.nocookie.net/landbeforetime/images/8/8d/Ducky_infobox.png"
     },
     {
         "name": "Tyrannosaurus Rex",
@@ -28,7 +28,7 @@ db.dinosaurs.insertMany([
         "weight": "7,000kg",
         "length": "12.0m",
         "found_in": "Canada, USA",
-        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
+        "image": "https://static.wikia.nocookie.net/landbeforetime/images/d/d3/Chompy.jpg"
     },
     {
         "name": "Stegosaurus",
@@ -37,7 +37,7 @@ db.dinosaurs.insertMany([
         "weight": "5,000kg",
         "length": "9.0m",
         "found_in": "USA",
-        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
+        "image": "https://static.wikia.nocookie.net/landbeforetime/images/9/96/Spike_infobox.png"
 
     },
     {
@@ -47,7 +47,7 @@ db.dinosaurs.insertMany([
         "weight": "5,500kg",
         "length": "9.0m",
         "found_in": "USA",
-        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
+        "image": "https://static.wikia.nocookie.net/landbeforetime/images/c/c3/Cera_infobox.png"
 
     },
     {
@@ -57,7 +57,7 @@ db.dinosaurs.insertMany([
         "weight": "50kg",
         "length": "Body length: 1.83m, Wingspan length: 6m",
         "found_in": "Germany",
-        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
+        "image": "https://static.wikia.nocookie.net/landbeforetime/images/f/fd/Petrie_infobox.png"
 
     },
     {
@@ -67,7 +67,7 @@ db.dinosaurs.insertMany([
         "weight": "100-300kg",
         "length": "6.2m",
         "found_in": "Tanzania",
-        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
+        "image": "https://static.wikia.nocookie.net/landbeforetime/images/6/6a/Elsie.jpg"
     },
     {
         "name": "Muttaburrasaurus",
@@ -76,7 +76,7 @@ db.dinosaurs.insertMany([
         "weight": "2,800kg",
         "length": "7.0m",
         "found_in": "Australia",
-        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
+        "image": "https://static.wikia.nocookie.net/landbeforetime/images/5/58/The_Taunting_Mutt.png"
     },
     {
         "name": "Oviraptor",
@@ -85,7 +85,7 @@ db.dinosaurs.insertMany([
         "weight": "20kg",
         "length": "2.0m",
         "found_in": "Mongolia",
-        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
+        "image": "https://static.wikia.nocookie.net/landbeforetime/images/7/75/Ruby_infobox.png"
     },
     {
         "name": "Hypsilophodon",
@@ -94,7 +94,7 @@ db.dinosaurs.insertMany([
         "weight": "50kg",
         "length": "2.3m",
         "found_in": "Spain, United Kingdom",
-        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
+        "image": "https://static.wikia.nocookie.net/landbeforetime/images/9/92/Hyp_III.png"
 
     },
 ])
