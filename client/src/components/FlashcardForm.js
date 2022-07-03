@@ -3,7 +3,7 @@ import { getDinosaurs, postDinosaur } from '../services/services';
 
 
 
-const FlashcardForm = ({ addDinosaur, setTrigger, setDinosaurs }) => {
+const FlashcardForm = ({ addDinosaur, setFormPopup, setDinosaurs }) => {
 
   const [formData, setFormData] = useState({
     name: "",
@@ -25,9 +25,10 @@ const FlashcardForm = ({ addDinosaur, setTrigger, setDinosaurs }) => {
     e.preventDefault();
     postDinosaur(formData).then((data) => {
       addDinosaur(data);
-    }).then(getDinosaurs().then((allDinosaurs) => {
-      setDinosaurs(allDinosaurs);
-    }))
+    })
+      .then(getDinosaurs().then((allDinosaurs) => {
+        setDinosaurs(allDinosaurs);
+      }))
     // Reset the form input values   
     setFormData({
       name: "",
@@ -38,7 +39,7 @@ const FlashcardForm = ({ addDinosaur, setTrigger, setDinosaurs }) => {
       found_in: "",
       image: "An Image"
     });
-    setTrigger(false);
+    setFormPopup(false);
   }
 
 

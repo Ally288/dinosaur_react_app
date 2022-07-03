@@ -5,11 +5,15 @@ import FlashcardBox from '../components/FlashcardBox';
 import { getDinosaurs, editDinosaur } from '../services/services';
 import Popup from '../components/Popup';
 import FlashcardForm from '../components/FlashcardForm';
+import EditFormPopup from '../components/EditFormPopup';
+import EditForm from '../components/EditForm';
 
 const FlashCardGridContainer = () => {
 
   const [dinosaurs, setDinosaurs] = useState([])
   const [formPopup, setFormPopup] = useState(false);
+  const [selectedDino, setSelectedDino] = useState(null);
+  const [editFormPopup, setEditFormPopup] = useState(false);
 
   useEffect(() => {
     getDinosaurs().then((allDinosaurs) => {
@@ -49,6 +53,15 @@ const FlashCardGridContainer = () => {
 
   //Edit function goes here
 
+  const selectDinoToEdit = (id) => {
+    // Filter the list of dinosaurs to find the one which matches the id and set it as dinoToEdit
+    const findByID = dinosaurs.filter(dinosaur => dinosaur._id === id);
+    // Returns an object inside an array so need to access first object
+    const dinoToEdit = findByID[0];
+    setSelectedDino(dinoToEdit);
+    setEditFormPopup(true);
+  }
+
   // const editDinosaur = (id)
 
   //Show function to add here
@@ -57,10 +70,13 @@ const FlashCardGridContainer = () => {
     <>
       <Header />
       <Buttons addDinosaur={addDinosaur} setFormPopup={setFormPopup} />
-      <FlashcardBox dinosaurs={dinosaurs} removeDinosaur={removeDinosaur} /> {/*PASS down EDIT and SHOW*/}
+      <FlashcardBox dinosaurs={dinosaurs} removeDinosaur={removeDinosaur} selectDinoToEdit={selectDinoToEdit} /> {/*PASS down EDIT and SHOW*/}
       <Popup trigger={formPopup} setTrigger={setFormPopup}>
-        <FlashcardForm setTrigger={setFormPopup} setDinosaurs={setDinosaurs} />
+        <FlashcardForm setFormPopup={setFormPopup} setDinosaurs={setDinosaurs} />
       </Popup>
+      <EditFormPopup trigger={editFormPopup} setTrigger={setEditFormPopup}>
+        <EditForm setEditFormPopup={setEditFormPopup} setDinosaurs={setDinosaurs} selectedDino={selectedDino} updateDinosaur={updateDinosaur} />
+      </EditFormPopup>
     </>
   )
 }
