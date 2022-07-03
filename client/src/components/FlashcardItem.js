@@ -24,9 +24,10 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur }) => {
       <h6>{dinosaur.length}</h6>
       <h6>{dinosaur.found_in}</h6>
       <p>{dinosaur.description}</p>
-      <img src={dinosaur.image} />
+      <img src={dinosaur.image} alt="dinosaur" width="120px" />
       <button onClick={handleDelete}> 🗑 </button>
       <button onClick={handleEdit}> Edit</button>
+      {console.log(dinosaur.image)}
 
     </div>
   )

@@ -10,7 +10,7 @@ db.dinosaurs.insertMany([
         "weight": "16,000 - 22,000kg",
         "length": "21.0m",
         "found_in": "USA",
-        "image": "/src/static/images/dinosaurs/Aptosaurus.webp"
+        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
     },
     {
         "name": "Saurolophus",
@@ -19,7 +19,7 @@ db.dinosaurs.insertMany([
         "weight": "1,900kg",
         "length": "9.0m",
         "found_in": "Canada, Mongolia",
-        "image": "/src/static/images/dinosaurs/Saurolophus.webp"
+        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
     },
     {
         "name": "Tyrannosaurus Rex",
@@ -28,7 +28,7 @@ db.dinosaurs.insertMany([
         "weight": "7,000kg",
         "length": "12.0m",
         "found_in": "Canada, USA",
-        "image": "/src/static/images/dinosaurs/Aptosaurus.webp"
+        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
     },
     {
         "name": "Stegosaurus",
@@ -37,7 +37,7 @@ db.dinosaurs.insertMany([
         "weight": "5,000kg",
         "length": "9.0m",
         "found_in": "USA",
-        "image": "/src/static/images/dinosaurs/Stegosaurus.webp"
+        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
 
     },
     {
@@ -47,7 +47,7 @@ db.dinosaurs.insertMany([
         "weight": "5,500kg",
         "length": "9.0m",
         "found_in": "USA",
-        "image": "/src/static/images/dinosaurs/Triceratops.webp"
+        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
 
     },
     {
@@ -57,7 +57,7 @@ db.dinosaurs.insertMany([
         "weight": "50kg",
         "length": "Body length: 1.83m, Wingspan length: 6m",
         "found_in": "Germany",
-        "image": "/src/static/images/dinosaurs/Pterodactylus.webp"
+        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
 
     },
     {
@@ -67,7 +67,7 @@ db.dinosaurs.insertMany([
         "weight": "100-300kg",
         "length": "6.2m",
         "found_in": "Tanzania",
-        "image": "/src/static/images/dinosaurs/Elasmosaurus.webp"
+        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
     },
     {
         "name": "Muttaburrasaurus",
@@ -76,7 +76,7 @@ db.dinosaurs.insertMany([
         "weight": "2,800kg",
         "length": "7.0m",
         "found_in": "Australia",
-        "image": "/src/static/images/dinosaurs/Muttaburrasaurus.webp"
+        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
     },
     {
         "name": "Oviraptor",
@@ -85,7 +85,7 @@ db.dinosaurs.insertMany([
         "weight": "20kg",
         "length": "2.0m",
         "found_in": "Mongolia",
-        "image": "/src/static/images/dinosaurs/Oviraptor.webp"
+        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
     },
     {
         "name": "Hypsilophodon",
@@ -94,7 +94,7 @@ db.dinosaurs.insertMany([
         "weight": "50kg",
         "length": "2.3m",
         "found_in": "Spain, United Kingdom",
-        "image": "/src/static/images/dinosaurs/Hypsilophodon.webp"
+        "image": "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
 
     },
 ])
