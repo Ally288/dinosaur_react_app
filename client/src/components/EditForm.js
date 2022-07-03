@@ -44,7 +44,7 @@ const EditForm = ({ updateDinosaur, setEditFormPopup, setDinosaurs, selectedDino
             description: description,
             diet: diet,
             weight: weight,
-            length: length
+            length: length,
             found_in: found_in,
             image: selectedDino.image
         }
