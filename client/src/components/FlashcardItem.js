@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { deleteDinosaur, editDinosaur } from '../services/services'
 import "./FlashcardItem.css"
 
 const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToEdit }) => {
+
+  const [flip, setFlip] = useState(false);
+
 
   const handleDelete = () => {
     deleteDinosaur(dinosaur._id).then(() => {
@@ -29,18 +32,29 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
 
 
   return (
-    <div className="dinoItem">
-      <h1>{dinosaur.name}</h1>
-      <h4>{dinosaur.diet}</h4>
-      <h6>{dinosaur.weight}</h6>
-      <h6>{dinosaur.length}</h6>
-      <h6>{dinosaur.found_in}</h6>
-      <p>{dinosaur.description}</p>
-      <img src={dinosaur.image} alt="dinosaur" width="120px" />
-      <button onClick={handleDelete}> 🗑 </button>
-      <button onClick={handleEdit} value={dinosaur._id}> Edit</button>
+
+    <div
+      className={`dinoItem ${flip ? 'flip' : ''}`}
+      onClick={() => setFlip(!flip)}>
+      <div className="front">
+        <h1>{dinosaur.name}</h1>
+        <div className="icons">
+          <img src={dinosaur.image} alt="dinosaur" width="120px" height="120px" />
+          <button onClick={handleDelete}> 🗑 </button>
+          <button onClick={handleEdit}> Edit</button>
+        </div>
+      </div>
+      <div className='back' >
+        <h2>{dinosaur.diet}</h2>
+        <h4>{dinosaur.weight}</h4>
+        <h4>{dinosaur.length}</h4>
+        <h4>{dinosaur.found_in}</h4>
+        <p>{dinosaur.description}</p>
+      </div>
 
     </div>
+
   )
 }
+
 export default FlashcardItem;
