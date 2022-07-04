@@ -7,6 +7,7 @@ import Popup from '../components/Popup';
 import FlashcardForm from '../components/FlashcardForm';
 import EditFormPopup from '../components/EditFormPopup';
 import EditForm from '../components/EditForm';
+import Quiz from './Quiz';
 
 
 const FlashCardGridContainer = () => {
@@ -82,6 +83,7 @@ const FlashCardGridContainer = () => {
       <EditFormPopup trigger={editFormPopup} setTrigger={setEditFormPopup}>
         <EditForm setEditFormPopup={setEditFormPopup} setDinosaurs={setDinosaurs} selectedDino={selectedDino} updateDinosaur={updateDinosaur} />
       </EditFormPopup>
+      <Quiz />
     </>
   )
 }
