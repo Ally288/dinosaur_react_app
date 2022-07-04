@@ -32,8 +32,8 @@ const EditForm = ( {updateDinosaur, setEditFormPopup, setDinosaurs, selectedDino
         const name = formData.name;
         const description = formData.description;
         const diet = formData.diet;
-        const weight = parseInt(formData.weight);
-        const length = parseInt(formData.length);
+        const weight = parseFloat(formData.weight);
+        const length = parseFloat(formData.length);
         const found_in = formData.found_in;
 
         // const editedVersion = { ...selectedDino, name, description, diet, weight, length, found_in }
@@ -103,7 +103,8 @@ const EditForm = ( {updateDinosaur, setEditFormPopup, setDinosaurs, selectedDino
                     type="weight"
                     id="weight"
                     name="weight"
-                    value={parseInt(formData.weight)} />
+                    value={parseInt(formData.weight)}
+                    pattern="^-?[0-9]\d*\.?\d*$" />
             </div>
             <div className="formWrap">
                 <label htmlFor="length">Length:</label>
@@ -112,7 +113,8 @@ const EditForm = ( {updateDinosaur, setEditFormPopup, setDinosaurs, selectedDino
                     type="length"
                     id="length"
                     name="length"
-                    value={parseInt(formData.length)} />
+                    value={parseInt(formData.length)}
+                    pattern="^-?[0-9]\d*\.?\d*$" />
             </div>
             <div className="formWrap">
                 <label htmlFor="found_in">Found In:</label>

@@ -9,8 +9,8 @@ const FlashcardForm = ({ addDinosaur, setFormPopup, dinosaurs, setDinosaurs }) =
     name: "",
     description: "",
     diet: "",
-    weight: "",
-    length: "",
+    weight: parseFloat(0),
+    length: parseFloat(0),
     found_in: "",
     image: "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
   })
@@ -33,8 +33,8 @@ const FlashcardForm = ({ addDinosaur, setFormPopup, dinosaurs, setDinosaurs }) =
       name: "",
       description: "",
       diet: "",
-      weight: "",
-      length: "",
+      weight: parseFloat(0),
+      length: parseFloat(0),
       found_in: "",
       image: "An Image"
     });
@@ -78,7 +78,8 @@ const FlashcardForm = ({ addDinosaur, setFormPopup, dinosaurs, setDinosaurs }) =
           type="weight"
           id="weight"
           name="weight"
-          value={formData.weight} />
+          value={parseFloat(formData.weight)}
+          pattern="^-?[0-9]\d*\.?\d*$" />
       </div>
       <div className="formWrap">
         <label htmlFor="length">Length:</label>
@@ -87,7 +88,8 @@ const FlashcardForm = ({ addDinosaur, setFormPopup, dinosaurs, setDinosaurs }) =
           type="length"
           id="length"
           name="length"
-          value={formData.length} />
+          value={parseFloat(formData.length)}
+          pattern="^-?[0-9]\d*\.?\d*$" />
       </div>
       <div className="formWrap">
         <label htmlFor="found_in">Found In:</label>
