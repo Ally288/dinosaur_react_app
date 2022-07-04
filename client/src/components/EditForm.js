@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { getDinosaurs, postDinosaur } from '../services/services';
+import "../static/css/EditForm.css"
 
 
-
-const EditForm = ({ updateDinosaur, setEditFormPopup, setDinosaurs, selectedDino }) => {
+const EditForm = ( {updateDinosaur, setEditFormPopup, setDinosaurs, selectedDino} ) => {
 
     const [formData, setFormData] = useState({
         _id: selectedDino._id,
@@ -103,7 +103,7 @@ const EditForm = ({ updateDinosaur, setEditFormPopup, setDinosaurs, selectedDino
                     type="weight"
                     id="weight"
                     name="weight"
-                    value={formData.weight} />
+                    value={parseInt(formData.weight)} />
             </div>
             <div className="formWrap">
                 <label htmlFor="length">Length:</label>
@@ -112,7 +112,7 @@ const EditForm = ({ updateDinosaur, setEditFormPopup, setDinosaurs, selectedDino
                     type="length"
                     id="length"
                     name="length"
-                    value={formData.length} />
+                    value={parseInt(formData.length)} />
             </div>
             <div className="formWrap">
                 <label htmlFor="found_in">Found In:</label>
@@ -133,7 +133,7 @@ const EditForm = ({ updateDinosaur, setEditFormPopup, setDinosaurs, selectedDino
           value={formData.image} />
       </div> */}
 
-            <input type="submit" value="Save" id="save" />
+            <input className="save-button" type="submit" value="Save" id="save" />
         </form>
     )
 }

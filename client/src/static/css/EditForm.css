@@ -1,0 +1,19 @@
+.formWrap{
+    display:flex;
+    text-align: center;
+}
+
+.save-button{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #71a1e0;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 12px;
+    padding: 8px;
+    width: 70px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 2px;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { deleteDinosaur, editDinosaur } from '../services/services'
-import "./FlashcardItem.css"
+import "../static/css/FlashcardItem.css"
 
 const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToEdit }) => {
 
@@ -44,13 +44,14 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
         </div>
       </div>
       <div className='back' >
-        <h2>{dinosaur.diet}</h2>
-        <h4>{dinosaur.weight}</h4>
-        <h4>{dinosaur.length}</h4>
-        <h4>{dinosaur.found_in}</h4>
+        <h4>{dinosaur.name}</h4>
+        <h5>Diet: {dinosaur.diet}</h5>
+        <h5>Weight: {dinosaur.weight.toLocaleString(2)}kg</h5>
+        <h5>Length: {dinosaur.length.toFixed(2)}m</h5>
+        <h5>Found in: {dinosaur.found_in}</h5>
         <p>{dinosaur.description}</p>
-        <button onClick={handleDelete}> 🗑 </button>
-        <button onClick={handleEdit} value={dinosaur._id}> Edit</button>
+        <button className="back-buttons" onClick={handleEdit} value={dinosaur._id}> ✍️ Edit</button>
+        <button className="back-buttons" onClick={handleDelete}> ♻️ Delete</button>
       </div>
 
     </div>

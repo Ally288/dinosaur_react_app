@@ -1,5 +1,5 @@
 import React from 'react'
-import './Buttons.css'
+import '../static/css/Buttons.css'
 
 const Buttons = ({ setFormPopup }) => {
 

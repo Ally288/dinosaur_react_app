@@ -1,5 +1,5 @@
 import React from 'react'
-import './Form.css'
+import '../static/css/EditFormPopup.css'
 
 const Popup = (props) => {
 
