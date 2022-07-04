@@ -9,7 +9,7 @@ import { getDinosaurs, editDinosaur } from './services/services';
 import './App.css';
 import Popup from './components/Popup';
 import FlashcardForm from './components/FlashcardForm';
-
+import ReactPlayer from "react-player"
 
 function App() {
 
@@ -50,7 +50,13 @@ function App() {
         <FlashcardForm setFormPopup={setFormPopup} setDinosaurs={setDinosaurs} addDinosaur={addDinosaur} />
       </Popup>
 
+   <ReactPlayer
+    url="https://soundcloud.com/umesongs/jurassic-park-theme?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+    />
       <footer> &copy; Ally, Ian and Jonny 2022 </footer>
+   
+ 
+  
 
     </>
   );
