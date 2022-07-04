@@ -1,23 +1,19 @@
-* {
+.quizContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    min-height: 100vh;
     font-family: "Verdana", cursive, sans-serif;
     color: #ffffff;
 }
 
-.quizContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-
-
-}
 
 .app {
-    background-color: dodgerblue;
-    width: 50%;
+    background-color: #545F66;
+    width: 60%;
     min-height: 200px;
     height: min-content;
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 20px;
     box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
     display: flex;
@@ -66,11 +62,11 @@
     justify-content: space-between;
 }
 
-button {
+.quiz-button {
     width: 100%;
     font-size: 16px;
     color: #ffffff;
-    background-color: dodgerblue;
+    background-color: #545F66;
     border-radius: 15px;
     display: flex;
     padding: 5px;

@@ -4,7 +4,7 @@ import FlashCardGridContainer from './FlashCardGridContainer'
 const MainContainer = () => {
     return (
         <div>
-            <FlashCardGridContainer />
+            <h1>Oh hey guys</h1>
         </div>
     )
 }

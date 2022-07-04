@@ -10,6 +10,15 @@ const Quiz = () => {
 
     const questions = [
         {
+            questionText: 'Why did dinosaurs go extinct?',
+            answerOptions: [
+                { answerText: 'They stopped having babies', isCorrect: false },
+                { answerText: 'Veganism', isCorrect: false },
+                { answerText: 'The cost of living crisis', isCorrect: false },
+                { answerText: 'They were hit by an asteroid', isCorrect: true },
+            ],
+        },
+        {
             questionText: 'What are Oviraptors also known as?',
             answerOptions: [
                 { answerText: 'Big reptiles', isCorrect: false },
@@ -34,15 +43,6 @@ const Quiz = () => {
                 { answerText: 'Stegasaurus', isCorrect: false },
                 { answerText: 'Velociraptor', isCorrect: false },
                 { answerText: 'Diplodocus', isCorrect: false },
-            ],
-        },
-        {
-            questionText: 'Why did dinosaurs go extinct?',
-            answerOptions: [
-                { answerText: 'They stopped having babies.', isCorrect: false },
-                { answerText: 'Rising sea levels.', isCorrect: false },
-                { answerText: 'The cost of living crisis.', isCorrect: false },
-                { answerText: 'They were hit by an asteroid.', isCorrect: true },
             ],
         },
     ];
@@ -76,7 +76,7 @@ const Quiz = () => {
                         </div>
                         <div className='answer-section'>
                             {questions[currentQuestion].answerOptions.map((answerOption, index) => (
-                                <button onClick={() => handleAnswerButtonClick(answerOption.isCorrect)} key={index}>{answerOption.answerText}</button>
+                                <button className="quiz-button" onClick={() => handleAnswerButtonClick(answerOption.isCorrect)} key={index}>{answerOption.answerText}</button>
                             ))}
                         </div>
                     </>
