@@ -6,9 +6,11 @@ import { getDinosaurs, editDinosaur } from '../services/services';
 import Popup from '../components/Popup';
 import FlashcardForm from '../components/FlashcardForm';
 
+
 const FlashCardGridContainer = () => {
 
-  const [dinosaurs, setDinosaurs] = useState([])
+  
+  const [dinosaurs, setDinosaurs] = useState([]);
   const [formPopup, setFormPopup] = useState(false);
 
   useEffect(() => {
@@ -45,11 +47,6 @@ const FlashCardGridContainer = () => {
     setDinosaurs(updatedDinosaurs);
 
   }
-
-
-  //Edit function goes here
-
-  // const editDinosaur = (id)
 
   //Show function to add here
 

@@ -7,7 +7,7 @@ const FlashcardBox = ({ dinosaurs, removeDinosaur, updateDinosaur }) => {
         return <FlashcardItem dinosaur={dinosaur} key={dinosaur._id} 
         removeDinosaur={removeDinosaur} updateDinosaur={updateDinosaur}
         />
-    })  ///EDIT and SHOW will pass through
+    })  ///SHOW will pass through
 
 
     return (
