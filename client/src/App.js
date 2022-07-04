@@ -50,6 +50,8 @@ function App() {
         <FlashcardForm setFormPopup={setFormPopup} setDinosaurs={setDinosaurs} addDinosaur={addDinosaur} />
       </Popup>
 
+      <footer> &copy; Ally, Ian and Jonny 2022 </footer>
+
     </>
   );
 }
