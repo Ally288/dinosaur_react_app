@@ -1,10 +1,15 @@
 import React from 'react'
 import './Buttons.css'
 
-const Buttons = ({ addDinosaur }) => {
+const Buttons = ({ setFormPopup }) => {
+
+    const handleClick = () => {
+        setFormPopup(true);
+    }
+
     return (
         <nav>
-            <button className="button" addDinosaur={addDinosaur}>Add Dinosaur</button>
+            <button className="button" onClick={handleClick}>Add Dinosaur</button>
             <button className="button" >Quiz</button>
         </nav>
     )

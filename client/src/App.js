@@ -1,4 +1,3 @@
-import FlashCardGridContainer from "./containers/FlashCardGridContainer";
 import MainContainer from "./containers/MainContainer";
 import ReactPlayer from "react-player"
 
