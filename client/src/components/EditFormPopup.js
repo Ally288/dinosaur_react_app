@@ -1,7 +1,7 @@
 import React from 'react'
 import './Form.css'
 
-const Popup = (props) => {
+const EditFormPopup = (props) => {
 
     if (!props.trigger) return null;
 
@@ -18,4 +18,4 @@ const Popup = (props) => {
     )
 }
 
-export default Popup;
+export default EditFormPopup;
