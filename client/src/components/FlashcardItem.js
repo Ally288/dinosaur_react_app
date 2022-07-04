@@ -22,6 +22,7 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
   const handleEdit = (event) => {
     // Find out the id of the dinosaur for which the edit button has been clicked
     const id = event.target.value;
+    console.log(id);
     // Call a function back up the chain which sets selectedDino
     selectDinoToEdit(id);
   }
@@ -40,8 +41,6 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
         <h1>{dinosaur.name}</h1>
         <div className="icons">
           <img src={dinosaur.image} alt="dinosaur" width="120px" height="120px" />
-          <button onClick={handleDelete}> 🗑 </button>
-          <button onClick={handleEdit}> Edit</button>
         </div>
       </div>
       <div className='back' >
@@ -50,6 +49,8 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
         <h4>{dinosaur.length}</h4>
         <h4>{dinosaur.found_in}</h4>
         <p>{dinosaur.description}</p>
+        <button onClick={handleDelete}> 🗑 </button>
+        <button onClick={handleEdit} value={dinosaur._id}> Edit</button>
       </div>
 
     </div>

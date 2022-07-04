@@ -11,7 +11,7 @@ import EditForm from '../components/EditForm';
 
 const FlashCardGridContainer = () => {
 
-  
+
   const [dinosaurs, setDinosaurs] = useState([]);
   const [formPopup, setFormPopup] = useState(false);
   const [selectedDino, setSelectedDino] = useState(null);
@@ -77,7 +77,7 @@ const FlashCardGridContainer = () => {
       <Buttons addDinosaur={addDinosaur} setFormPopup={setFormPopup} />
       <FlashcardBox dinosaurs={dinosaurs} removeDinosaur={removeDinosaur} selectDinoToEdit={selectDinoToEdit} /> {/*PASS down EDIT and SHOW*/}
       <Popup trigger={formPopup} setTrigger={setFormPopup}>
-        <FlashcardForm setFormPopup={setFormPopup} setDinosaurs={setDinosaurs} />
+        <FlashcardForm setFormPopup={setFormPopup} setDinosaurs={setDinosaurs} addDinosaur={addDinosaur} />
       </Popup>
       <EditFormPopup trigger={editFormPopup} setTrigger={setEditFormPopup}>
         <EditForm setEditFormPopup={setEditFormPopup} setDinosaurs={setDinosaurs} selectedDino={selectedDino} updateDinosaur={updateDinosaur} />

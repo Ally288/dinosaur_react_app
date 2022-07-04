@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getDinosaurs, postDinosaur } from '../services/services';
 
 
 
-const FlashcardForm = ({ addDinosaur, setFormPopup, setDinosaurs }) => {
+const FlashcardForm = ({ addDinosaur, setFormPopup, dinosaurs, setDinosaurs }) => {
 
   const [formData, setFormData] = useState({
     name: "",
@@ -26,9 +26,8 @@ const FlashcardForm = ({ addDinosaur, setFormPopup, setDinosaurs }) => {
     postDinosaur(formData).then((data) => {
       addDinosaur(data);
     })
-      .then(getDinosaurs().then((allDinosaurs) => {
-        setDinosaurs(allDinosaurs);
-      }))
+
+    console.log(dinosaurs);
     // Reset the form input values   
     setFormData({
       name: "",
@@ -41,7 +40,6 @@ const FlashcardForm = ({ addDinosaur, setFormPopup, setDinosaurs }) => {
     });
     setFormPopup(false);
   }
-
 
   return (
     <form onSubmit={onSubmit} id="flashcard-form" >
