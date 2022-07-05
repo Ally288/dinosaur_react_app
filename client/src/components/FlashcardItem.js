@@ -24,13 +24,13 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
 
 
   const soundSrc = (dinosaur.sound);
- 
+
   const playSound = (src) => {
     const sound = new Howl({ src });
     sound.play();
-    
+
   };
-  
+
 
   // Inside the edit form use a form useState
   // Default values should be the values of selectedDino
@@ -54,9 +54,9 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
         <h4>{dinosaur.length}</h4>
         <h4>{dinosaur.found_in}</h4>
         <p>{dinosaur.description}</p>
-        <button className="back-buttons" onClick={handleEdit} value={dinosaur._id}> :writing_hand: Edit</button>
-        <button className="back-buttons" onClick={handleDelete}> :recycle: Delete</button>
-        <button onClick={() => playSound(soundSrc)}> 🔉</button>
+        <button className="back-buttons" onClick={handleEdit} value={dinosaur._id}> ✍️ Edit</button>
+        <button className="back-buttons" onClick={handleDelete}> ♻️ Delete</button>
+        <button className="back-buttons" onClick={() => playSound(soundSrc)}> 🔉 Roar</button>
       </div>
 
     </div>
