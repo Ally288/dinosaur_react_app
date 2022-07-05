@@ -7,30 +7,24 @@ import Popup from '../components/Popup';
 import FlashcardForm from '../components/FlashcardForm';
 import EditFormPopup from '../components/EditFormPopup';
 import EditForm from '../components/EditForm';
+import Quiz from './Quiz';
 
 
+const FlashCardGridContainer = ({ dinosaurs, setDinosaurs, formPopup, setFormPopup, addDinosaur }) => {
+
+
+<<<<<<< HEAD
 
 const FlashCardGridContainer = () => {
+=======
+>>>>>>> bd54e4376950c673c48c98d33c71b672ca6f825c
 
 
-  const [dinosaurs, setDinosaurs] = useState([]);
-  const [formPopup, setFormPopup] = useState(false);
   const [selectedDino, setSelectedDino] = useState(null);
   const [editFormPopup, setEditFormPopup] = useState(false);
 
-  useEffect(() => {
-    getDinosaurs().then((allDinosaurs) => {
-      setDinosaurs(allDinosaurs);
-    })
-  }, []);
 
 
-  const addDinosaur = (dinosaur) => {
-    const temp = dinosaurs.map(d => d);
-
-    temp.push(dinosaur);
-    setDinosaurs(temp);
-  }
 
   const removeDinosaur = (id) => {
 
@@ -74,12 +68,8 @@ const FlashCardGridContainer = () => {
 
   return (
     <>
-      <Header />
-      <Buttons addDinosaur={addDinosaur} setFormPopup={setFormPopup} />
-      <FlashcardBox dinosaurs={dinosaurs} removeDinosaur={removeDinosaur} selectDinoToEdit={selectDinoToEdit} /> {/*PASS down EDIT and SHOW*/}
-      <Popup trigger={formPopup} setTrigger={setFormPopup}>
-        <FlashcardForm setFormPopup={setFormPopup} setDinosaurs={setDinosaurs} addDinosaur={addDinosaur} />
-      </Popup>
+      <FlashcardBox dinosaurs={dinosaurs} removeDinosaur={removeDinosaur} selectDinoToEdit={selectDinoToEdit} />
+
       <EditFormPopup trigger={editFormPopup} setTrigger={setEditFormPopup}>
         <EditForm setEditFormPopup={setEditFormPopup} setDinosaurs={setDinosaurs} selectedDino={selectedDino} updateDinosaur={updateDinosaur} />
       </EditFormPopup>
