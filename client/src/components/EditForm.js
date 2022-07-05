@@ -103,7 +103,7 @@ const EditForm = ( {updateDinosaur, setEditFormPopup, setDinosaurs, selectedDino
                     type="weight"
                     id="weight"
                     name="weight"
-                    value={parseFloat(formData.weight)}
+                    value={formData.weight}
                 />
             </div>
             <div className="formWrap">
@@ -113,7 +113,7 @@ const EditForm = ( {updateDinosaur, setEditFormPopup, setDinosaurs, selectedDino
                     type="length"
                     id="length"
                     name="length"
-                    value={parseFloat(formData.length)}
+                    value={formData.length}
                 />
             </div>
             <div className="formWrap">
