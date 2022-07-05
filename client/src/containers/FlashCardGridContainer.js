@@ -13,11 +13,6 @@ import Quiz from './Quiz';
 const FlashCardGridContainer = ({ dinosaurs, setDinosaurs, formPopup, setFormPopup, addDinosaur }) => {
 
 
-<<<<<<< HEAD
-
-const FlashCardGridContainer = () => {
-=======
->>>>>>> bd54e4376950c673c48c98d33c71b672ca6f825c
 
 
   const [selectedDino, setSelectedDino] = useState(null);

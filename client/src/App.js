@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react';
 import MainContainer from "./containers/MainContainer";
-<<<<<<< HEAD
-import ReactPlayer from "react-player";
-=======
 import Header from "./components/Header";
 import Buttons from "./components/Buttons";
 import FlashCardGridContainer from "./containers/FlashCardGridContainer";
@@ -13,7 +10,6 @@ import './App.css';
 import Popup from './components/Popup';
 import FlashcardForm from './components/FlashcardForm';
 
->>>>>>> bd54e4376950c673c48c98d33c71b672ca6f825c
 
 function App() {
 
@@ -36,13 +32,6 @@ function App() {
   }
 
   return (
-<<<<<<< HEAD
-    <>      
-    <ReactPlayer
-    url="https://soundcloud.com/umesongs/jurassic-park-theme?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-    />
-    <MainContainer />
-=======
     <>
       <Router>
         <Header />
@@ -61,7 +50,6 @@ function App() {
         <FlashcardForm setFormPopup={setFormPopup} setDinosaurs={setDinosaurs} addDinosaur={addDinosaur} />
       </Popup>
 
->>>>>>> bd54e4376950c673c48c98d33c71b672ca6f825c
     </>
   );
 }
