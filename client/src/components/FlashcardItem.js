@@ -49,14 +49,16 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
         </div>
       </div>
       <div className='back' >
-        <h2>{dinosaur.diet}</h2>
-        <h4>{dinosaur.weight}</h4>
-        <h4>{dinosaur.length}</h4>
-        <h4>{dinosaur.found_in}</h4>
+
+        <h4>Diet: {dinosaur.diet}</h4>
+        <h4>Weight: {dinosaur.weight} kg</h4>
+        <h4>Length: {dinosaur.length} m</h4>
+        <h4>Found In: {dinosaur.found_in}</h4>
+
         <p>{dinosaur.description}</p>
         <button className="back-buttons" onClick={handleEdit} value={dinosaur._id}> ✍️ Edit</button>
         <button className="back-buttons" onClick={handleDelete}> ♻️ Delete</button>
-        <button className="back-buttons" onClick={() => playSound(soundSrc)}> 🔉 Roar</button>
+        <button className="back-buttons" onClick={() => playSound(soundSrc)}> 🔉 Roar!</button
       </div>
 
     </div>
