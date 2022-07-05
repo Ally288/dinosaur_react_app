@@ -27,11 +27,9 @@ function App() {
 
   const soundSrc = "/tune/jp18.mp3"
   
-
   const playSound = (src) => {
     const sound = new Howl({ src });
     sound.play();
-                        
   };
 
 
@@ -45,10 +43,13 @@ function App() {
   return (
     <>
       <Router>
+        <div className='asteroid'>
+          <img src ={require('../src/static/images/asteroid.png')} alt="asteroid" />
+        </div>
         <button onClick={() => playSound(soundSrc)}> 🔉</button>
         <Header />
         <Buttons addDinosaur={addDinosaur} setFormPopup={setFormPopup} />
-
+        
         <Routes>
           <Route exact path="/" element={<MainContainer />} />
           <Route path="/dinosaurs" element={<FlashCardGridContainer dinosaurs={dinosaurs} setDinosaurs={setDinosaurs} formPopup={formPopup} addDinosaur={addDinosaur} />} />
