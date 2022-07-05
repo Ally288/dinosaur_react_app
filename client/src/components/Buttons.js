@@ -1,7 +1,9 @@
 import React from 'react'
 import './Buttons.css'
 
+
 const Buttons = ({ setFormPopup }) => {
+
 
     const handleClick = () => {
         setFormPopup(true);

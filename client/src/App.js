@@ -1,5 +1,5 @@
 import MainContainer from "./containers/MainContainer";
-import ReactPlayer from "react-player"
+import ReactPlayer from "react-player";
 
 function App() {
   return (

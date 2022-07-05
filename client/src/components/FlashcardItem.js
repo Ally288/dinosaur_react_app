@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import { deleteDinosaur, editDinosaur } from '../services/services'
+import React, { useState } from 'react';
+import { deleteDinosaur, editDinosaur } from '../services/services';
+import { Howl } from "howler";
 import "./FlashcardItem.css"
 
 const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToEdit }) => {
@@ -13,12 +14,6 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
     })
   }
 
-  // const handleEdit = () => {
-  //   editDinosaur(dinosaur._id).then(() => {
-  //     updateDinosaur(dinosaur._id)
-  //   })
-  // }
-
   const handleEdit = (event) => {
     // Find out the id of the dinosaur for which the edit button has been clicked
     const id = event.target.value;
@@ -26,6 +21,16 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
     // Call a function back up the chain which sets selectedDino
     selectDinoToEdit(id);
   }
+
+  // 
+  const soundSrc = (dinosaur.sound);
+  //  "/Apato.mp3"
+  const playSound = (src) => {
+    const sound = new Howl({ src });
+    sound.play();
+    // console.log(sound);
+  };
+  // html5: true
 
   // Inside the edit form use a form useState
   // Default values should be the values of selectedDino
@@ -51,6 +56,7 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
         <p>{dinosaur.description}</p>
         <button onClick={handleDelete}> 🗑 </button>
         <button onClick={handleEdit} value={dinosaur._id}> Edit</button>
+        <button onClick={() => playSound(soundSrc)}> 🔉</button>
       </div>
 
     </div>
