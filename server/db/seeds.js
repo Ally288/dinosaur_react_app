@@ -30,7 +30,7 @@ db.dinosaurs.insertMany([
         "weight": 7000, //kg
         "length": 12.0, //m
         "found_in": "Canada, USA",
-        "image": "https://static.wikia.nocookie.net/landbeforetime/images/d/d3/Chompy.jpg",
+        "image": "https://i.ibb.co/xHFwS6n/sharptooth.png",
         "sound": "/roars/Trex.mp3"
     },
     {
