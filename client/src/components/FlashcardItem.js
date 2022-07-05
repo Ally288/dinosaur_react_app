@@ -54,9 +54,9 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
         <h4>Length: {dinosaur.length} m</h4>
         <h4>Found In: {dinosaur.found_in}</h4>
         <p>{dinosaur.description}</p>
-        <button className="back-buttons" onClick={handleEdit} value={dinosaur._id}> :writing_hand: Edit</button>
-        <button className="back-buttons" onClick={handleDelete}> :recycle: Delete</button>
-        <button onClick={() => playSound(soundSrc)}> 🔉</button>
+        <button className="back-buttons" onClick={handleEdit} value={dinosaur._id}> ✍️ Edit</button>
+        <button className="back-buttons" onClick={handleDelete}> ♻️ Delete</button>
+        <button className="back-buttons" onClick={() => playSound(soundSrc)}> 🔉 Roar!</button>
       </div>
 
     </div>
