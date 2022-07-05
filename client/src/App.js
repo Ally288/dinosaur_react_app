@@ -9,6 +9,7 @@ import { getDinosaurs, editDinosaur } from './services/services';
 import './App.css';
 import Popup from './components/Popup';
 import FlashcardForm from './components/FlashcardForm';
+import { Howl } from 'howler';
 
 
 function App() {
@@ -23,6 +24,15 @@ function App() {
     })
   }, []);
 
+  const soundSrc = "/tune/jp18.mp3"
+  //  
+
+  const playSound = (src) => {
+    const sound = new Howl({ src });
+    sound.play();
+    console.log(sound);                    // 
+  };
+
 
   const addDinosaur = (dinosaur) => {
     const temp = dinosaurs.map(d => d);
@@ -34,6 +44,7 @@ function App() {
   return (
     <>
       <Router>
+        <button onClick={() => playSound(soundSrc)}> 🔉</button>
         <Header />
         <Buttons addDinosaur={addDinosaur} setFormPopup={setFormPopup} />
 
