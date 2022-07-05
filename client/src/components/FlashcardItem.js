@@ -24,13 +24,13 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
 
 
   const soundSrc = (dinosaur.sound);
- 
+
   const playSound = (src) => {
     const sound = new Howl({ src });
     sound.play();
-    
+
   };
-  
+
 
   // Inside the edit form use a form useState
   // Default values should be the values of selectedDino
@@ -42,11 +42,11 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
     <div
       className={`dinoItem ${flip ? 'flip' : ''}`}
       onClick={() => setFlip(!flip)}>
-      <div className="front">
+      <div className={`front ${flip ? 'absolute' : ''}`}>
         <h1>{dinosaur.name}</h1>
-        <div className="icons">
-          <img src={dinosaur.image} alt="dinosaur" width="120px" height="120px" />
-        </div>
+        {/* <div className="icons"> */}
+        <img src={dinosaur.image} alt="dinosaur" width="120px" height="120px" />
+        {/* </div> */}
       </div>
       <div className='back' >
 

@@ -5,9 +5,9 @@ body {
 
 .dinoItem {
     border: 1px solid black;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     border-radius: 1rem;
     position: relative;
     width: 300px;
@@ -32,11 +32,27 @@ body {
     --rotate-y: 180deg;
 }
 
-.dinoItem .front,
+.dinoItem .front {
+    padding: 1rem;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.absolute {
+    position: absolute;
+}
+
 .dinoItem .back {
     position: absolute;
     padding: 1rem;
     backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .dinoItem .back {
