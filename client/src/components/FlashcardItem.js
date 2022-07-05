@@ -43,7 +43,7 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
       className={`dinoItem ${flip ? 'flip' : ''}`}
       onClick={() => setFlip(!flip)}>
       <div className={`front ${flip ? 'absolute' : ''}`}>
-        <h1>{dinosaur.name}</h1>
+        <h1 className="dinoname">{dinosaur.name}</h1>
         {/* <div className="icons"> */}
         <img src={dinosaur.image} alt="dinosaur" width="160px" height="160px" />
         {/* </div> */}

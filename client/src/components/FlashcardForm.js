@@ -46,7 +46,7 @@ const FlashcardForm = ({ addDinosaur, setFormPopup, dinosaurs, setDinosaurs }) =
 
   return (
     <form onSubmit={onSubmit} id="flashcard-form" >
-      <h2>Add a Dinosaur</h2>
+      <h2 className="formheader">Add a Dinosaur</h2>
       <div className="formWrap">
         <label htmlFor="name">Name:</label>
         <input
@@ -111,7 +111,7 @@ const FlashcardForm = ({ addDinosaur, setFormPopup, dinosaurs, setDinosaurs }) =
           value={formData.image} />
       </div> */}
 
-      <input type="submit" value="Save" id="save" />
+      <input type="submit" value="Save" id="save" className="formheader" />
     </form>
   )
 }

@@ -25,6 +25,10 @@
     right: 25px;
 }
 
+.formheader {
+    font-family: 'Fredoka One', cursive;
+}
+
 .close {
     font-size: 45px;
     font-weight: 600;
