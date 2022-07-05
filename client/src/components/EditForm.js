@@ -32,8 +32,8 @@ const EditForm = ({ updateDinosaur, setEditFormPopup, setDinosaurs, selectedDino
         const name = formData.name;
         const description = formData.description;
         const diet = formData.diet;
-        const weight = formData.weight;
-        const length = formData.length;
+        const weight = parseFloat(formData.weight);
+        const length = parseFloat(formData.length);
         const found_in = formData.found_in;
 
         // const editedVersion = { ...selectedDino, name, description, diet, weight, length, found_in }
