@@ -1,5 +1,10 @@
 {
   "dependencies": {
-    "react-card-flip": "^1.1.5"
+    "react-card-flip": "^1.1.5",
+<<<<<<< HEAD
+    "react-howler": "^5.2.0"
+=======
+    "react-router-dom": "^6.3.0"
+>>>>>>> bd54e4376950c673c48c98d33c71b672ca6f825c
   }
 }
