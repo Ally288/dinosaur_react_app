@@ -25,12 +25,12 @@ function App() {
   }, []);
 
   const soundSrc = "/tune/jp18.mp3"
-  //  
+  
 
   const playSound = (src) => {
     const sound = new Howl({ src });
     sound.play();
-    console.log(sound);                    // 
+                        
   };
 
 

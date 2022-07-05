@@ -22,15 +22,15 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
     selectDinoToEdit(id);
   }
 
-  // 
+
   const soundSrc = (dinosaur.sound);
-  //  "/Apato.mp3"
+ 
   const playSound = (src) => {
     const sound = new Howl({ src });
     sound.play();
-    // console.log(sound);
+    
   };
-  // html5: true
+  
 
   // Inside the edit form use a form useState
   // Default values should be the values of selectedDino
