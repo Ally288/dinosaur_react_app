@@ -16,6 +16,7 @@ const Buttons = ({ setFormPopup }) => {
             <Link to="/"> <button className="button" >About</button> </Link>
             <Link to="/dinosaurs"><button className="button" >Dinosaurs</button></Link>
             <Link to="/quiz" > <button className="button" >Quiz</button> </Link>
+            <Link to="/chart" > <button className="button" >Chart</button> </Link>
 
 
         </nav>
