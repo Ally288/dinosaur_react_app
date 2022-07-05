@@ -26,12 +26,12 @@ function App() {
   }, []);
 
   const soundSrc = "/tune/jp18.mp3"
-  
+
 
   const playSound = (src) => {
     const sound = new Howl({ src });
     sound.play();
-                        
+
   };
 
 
@@ -45,7 +45,7 @@ function App() {
   return (
     <>
       <Router>
-        <button onClick={() => playSound(soundSrc)}> 🔉</button>
+        <img className="sound" onClick={() => playSound(soundSrc)} alt="play" src="/images/play.png" />
         <Header />
         <Buttons addDinosaur={addDinosaur} setFormPopup={setFormPopup} />
 
