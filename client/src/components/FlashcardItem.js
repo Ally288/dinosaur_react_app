@@ -54,8 +54,8 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
         <h4>{dinosaur.length}</h4>
         <h4>{dinosaur.found_in}</h4>
         <p>{dinosaur.description}</p>
-        <button onClick={handleDelete}> 🗑 </button>
-        <button onClick={handleEdit} value={dinosaur._id}> Edit</button>
+        <button className="back-buttons" onClick={handleEdit} value={dinosaur._id}> :writing_hand: Edit</button>
+        <button className="back-buttons" onClick={handleDelete}> :recycle: Delete</button>
         <button onClick={() => playSound(soundSrc)}> 🔉</button>
       </div>
 

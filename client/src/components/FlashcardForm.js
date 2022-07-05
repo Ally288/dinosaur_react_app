@@ -23,7 +23,10 @@ const FlashcardForm = ({ addDinosaur, setFormPopup, dinosaurs, setDinosaurs }) =
 
   const onSubmit = (e) => {
     e.preventDefault();
-    postDinosaur(formData).then((data) => {
+    const tempFormData = formData;
+    tempFormData.weight = parseFloat(formData.weight)
+    tempFormData.length = parseFloat(formData.length)
+    postDinosaur(tempFormData).then((data) => {
       addDinosaur(data);
     })
 
