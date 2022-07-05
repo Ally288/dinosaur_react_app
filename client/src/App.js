@@ -10,6 +10,8 @@ import ChartContainer from "./containers/ChartContainer";
 import Popup from './components/Popup';
 import FlashcardForm from './components/FlashcardForm';
 import './App.css';
+import { Howl } from 'howler';
+
 
 function App() {
 
@@ -23,6 +25,15 @@ function App() {
     })
   }, []);
 
+  const soundSrc = "/tune/jp18.mp3"
+  
+
+  const playSound = (src) => {
+    const sound = new Howl({ src });
+    sound.play();
+                        
+  };
+
 
   const addDinosaur = (dinosaur) => {
     const temp = dinosaurs.map(d => d);
@@ -34,6 +45,7 @@ function App() {
   return (
     <>
       <Router>
+        <button onClick={() => playSound(soundSrc)}> 🔉</button>
         <Header />
         <Buttons addDinosaur={addDinosaur} setFormPopup={setFormPopup} />
 

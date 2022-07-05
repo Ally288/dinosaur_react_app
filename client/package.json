@@ -9,7 +9,11 @@
     "howler": "^2.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
     "react-google-charts": "^4.0.0",
+=======
+    "react-player": "^2.10.1",
+>>>>>>> 0493b49f20a916daaac1ac1e93256b322b83da37
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"

@@ -3,7 +3,8 @@ import './Header.css'
 
 const Header = () => {
   return (
-    <h1 className="header" >BBCSAURUS</h1>
+    <img className="header" src="/images/BBC.png" alt="logo" />
+
   )
 }
 

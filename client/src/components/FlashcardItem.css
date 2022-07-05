@@ -51,3 +51,18 @@ body {
 .icons {
     padding: 20px;
 }
+
+.back-buttons {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #B02929;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 12px;
+    padding: 8px;
+    width: 70px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 2px;
+}
