@@ -11,7 +11,7 @@ const Popup = (props) => {
     return (
         <div className="popup">
             <div className="popup-inner">
-                <button className="close-btn" onClick={handleClick}>close</button>
+                <span className="close close-btn" onClick={handleClick}>&times;</span>
                 {props.children}
             </div>
         </div>
