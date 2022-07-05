@@ -9,8 +9,8 @@ const FlashcardForm = ({ addDinosaur, setFormPopup, dinosaurs, setDinosaurs }) =
     name: "",
     description: "",
     diet: "",
-    weight: parseFloat(0),
-    length: parseFloat(0),
+    weight: "",
+    length: "",
     found_in: "",
     image: "https://i.ibb.co/23z2L5X/dinosaur-23694220.jpg"
   })
@@ -23,7 +23,10 @@ const FlashcardForm = ({ addDinosaur, setFormPopup, dinosaurs, setDinosaurs }) =
 
   const onSubmit = (e) => {
     e.preventDefault();
-    postDinosaur(formData).then((data) => {
+    const tempFormData = formData;
+    tempFormData.weight = parseInt(formData.weight)
+    tempFormData.length = parseInt(formData.length)
+    postDinosaur(tempFormData).then((data) => {
       addDinosaur(data);
     })
 
@@ -33,8 +36,8 @@ const FlashcardForm = ({ addDinosaur, setFormPopup, dinosaurs, setDinosaurs }) =
       name: "",
       description: "",
       diet: "",
-      weight: parseFloat(0),
-      length: parseFloat(0),
+      weight: "",
+      length: "",
       found_in: "",
       image: "An Image"
     });
@@ -78,7 +81,7 @@ const FlashcardForm = ({ addDinosaur, setFormPopup, dinosaurs, setDinosaurs }) =
           type="weight"
           id="weight"
           name="weight"
-          value={parseFloat(formData.weight)}
+          value={formData.weight}
           pattern="^-?[0-9]\d*\.?\d*$" />
       </div>
       <div className="formWrap">
@@ -88,7 +91,7 @@ const FlashcardForm = ({ addDinosaur, setFormPopup, dinosaurs, setDinosaurs }) =
           type="length"
           id="length"
           name="length"
-          value={parseFloat(formData.length)}
+          value={formData.length}
           pattern="^-?[0-9]\d*\.?\d*$" />
       </div>
       <div className="formWrap">
