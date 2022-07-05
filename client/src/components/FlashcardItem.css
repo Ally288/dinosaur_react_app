@@ -48,10 +48,6 @@ body {
     position: absolute;
     padding: 1rem;
     backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .dinoItem .back {
@@ -70,14 +66,18 @@ body {
 .back-buttons {
     display: inline-block;
     border-radius: 4px;
-    background-color: #B02929;
-    border: none;
-    color: #FFFFFF;
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
     text-align: center;
-    font-size: 12px;
+    font-size: 1rem;
     padding: 8px;
-    width: 70px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 2px;
+}
+
+.back-buttons:hover {
+    background-color: #4d4d4d;
+    color: white;
 }

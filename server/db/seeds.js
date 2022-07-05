@@ -55,7 +55,7 @@ db.dinosaurs.insertMany([
     },
     {
         "name": "Pterodactylus",
-        "description": "Became extinct around the same time as dinosaurs, however they were not dinosaurs, rather were flying reptiles",
+        "description": "Became extinct around the same time as dinosaurs but they were actually flying reptiles",
         "diet": "Carnivorous",
         "weight": 50, //kg
         "length": 1.83, //m
