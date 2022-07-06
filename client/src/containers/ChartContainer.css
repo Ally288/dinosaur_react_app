@@ -1,0 +1,19 @@
+.charts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.weight-chart,
+.length-chart,
+.diet-chart {
+    border: 5px;
+    border: thin;
+    border-color: black;
+    border-radius: 5px;
+    padding: 1px;
+    height: 50%;
+    width: 100%;
+    margin-top: 20px;
+}

@@ -32,8 +32,8 @@ const EditForm = ({ updateDinosaur, setEditFormPopup, setDinosaurs, selectedDino
         const name = formData.name;
         const description = formData.description;
         const diet = formData.diet;
-        const weight = formData.weight;
-        const length = formData.length;
+        const weight = parseFloat(formData.weight);
+        const length = parseFloat(formData.length);
         const found_in = formData.found_in;
 
         // const editedVersion = { ...selectedDino, name, description, diet, weight, length, found_in }
@@ -68,7 +68,7 @@ const EditForm = ({ updateDinosaur, setEditFormPopup, setDinosaurs, selectedDino
 
     return (
         <form onSubmit={onSubmit} id="flashcard-form" >
-            <h2>Edit Dinosaur</h2>
+            <h2 className="formheader">Edit Dinosaur</h2>
             <div className="formWrap">
                 <label htmlFor="name">Name:</label>
                 <input
@@ -133,7 +133,7 @@ const EditForm = ({ updateDinosaur, setEditFormPopup, setDinosaurs, selectedDino
           value={formData.image} />
       </div> */}
 
-            <input type="submit" value="Save" id="save" />
+            <input type="submit" value="Save" id="save" className="formheader" />
         </form>
     )
 }
