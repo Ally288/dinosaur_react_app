@@ -3,33 +3,36 @@
     justify-content: center;
     margin-top: 20px;
     min-height: 100vh;
-    font-family: "Verdana", cursive, sans-serif;
-    color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.6rem;
+    color: #4d4d4d;
 }
 
 
 .app {
-    background-color: #545F66;
+    background-color: #8dd89b;
     width: 60%;
-    min-height: 200px;
+    min-height: 300px;
     height: min-content;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
 }
 
 .score-section {
     display: flex;
-    font-size: 24px;
+    font-size: 3rem;
+    justify-content: center;
     align-items: center;
 }
 
 /* QUESTION/TIMER/LEFT SECTION */
 .question-section {
     width: 100%;
-    position: relative;
+    /* position: relative; */
 }
 
 .question-count {
@@ -41,7 +44,7 @@
 }
 
 .question-text {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .timer-text {
@@ -64,16 +67,18 @@
 
 .quiz-button {
     width: 100%;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #545F66;
+    font-size: 1.5rem;
+    font-family: 'DM Sans', sans-serif;
+    color: #545F66;
+    background-color: #88d9d4;
     border-radius: 15px;
     display: flex;
     padding: 5px;
     justify-content: flex-start;
     align-items: center;
-    border: 5px solid hotpink;
+    border: 5px solid #545F66;
     cursor: pointer;
+    margin-bottom: 3px;
 }
 
 .correct {
@@ -86,6 +91,7 @@
 
 button:hover {
     background-color: #555e7d;
+    color: white;
 }
 
 button:focus {
