@@ -44,7 +44,7 @@ function App() {
     <>
       <Router>
         <div className='asteroid'>
-          <img src ={require('../src/static/images/asteroid.png')} alt="asteroid" />
+          <img width="100px" src ={require('../src/static/images/asteroid.png')} alt="asteroid" />
         </div>
         <button onClick={() => playSound(soundSrc)}> 🔉</button>
         <Header />
