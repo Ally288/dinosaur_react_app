@@ -14,7 +14,8 @@ nav {
     font-size: 16px;
     margin: 5px;
     cursor: pointer;
-} */
+    font-family: 'Fredoka One', cursive;
+*/ } 
 
 /* CSS */
 .button {
@@ -55,4 +56,5 @@ transform: translate3d(0, 2px, 0);
 
 .button:focus {
 box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+
 }

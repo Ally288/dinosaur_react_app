@@ -26,10 +26,14 @@ function App() {
   }, []);
 
   const soundSrc = "/tune/jp18.mp3"
-  
+
+
+
   const playSound = (src) => {
     const sound = new Howl({ src });
     sound.play();
+
+
   };
 
 
@@ -43,10 +47,14 @@ function App() {
   return (
     <>
       <Router>
+
+        <img className="sound" onClick={() => playSound(soundSrc)} alt="play" src="/images/play.png" />
+
         <div className='asteroid'>
           <img width="100px" src ={require('../src/static/images/asteroid.png')} alt="asteroid" />
         </div>
         <button onClick={() => playSound(soundSrc)}> 🔉</button>
+
         <Header />
         <Buttons addDinosaur={addDinosaur} setFormPopup={setFormPopup} />
         
@@ -55,7 +63,7 @@ function App() {
           <Route path="/dinosaurs" element={<FlashCardGridContainer dinosaurs={dinosaurs} setDinosaurs={setDinosaurs} formPopup={formPopup} addDinosaur={addDinosaur} />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/chart" element={<ChartContainer />} />
-          <Route path="*" element={<div className="container404"><h1>404 Page Not Found</h1><iframe width="560" height="315" src="https://www.youtube.com/embed/gmxQSwwTRqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>} />
+          <Route path="*" element={<div className="container404"><h1>404 - You've chosen the wrong path </h1><iframe width="560" height="315" src="https://www.youtube.com/embed/gmxQSwwTRqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>} />
         </Routes>
 
       </Router>
