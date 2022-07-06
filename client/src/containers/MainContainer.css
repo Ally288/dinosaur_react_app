@@ -40,7 +40,9 @@
     transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
 }
 
-.card.flipally, .card.flipian, .card.flipjonny {
+.card.flipally,
+.card.flipian,
+.card.flipjonny {
     --rotate-y: 1260deg;
 }
 
@@ -57,6 +59,7 @@
 
 .profpic {
     padding: 20px;
+    border-radius: 50%;
 }
 
 .biobtn {
