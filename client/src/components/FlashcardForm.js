@@ -12,7 +12,8 @@ const FlashcardForm = ({ addDinosaur, setFormPopup, dinosaurs, setDinosaurs }) =
     weight: "",
     length: "",
     found_in: "",
-    image: "https://static.tvtropes.org/pmwiki/pub/images/land_before_time10_disneyscreencapscom_5285.jpg"
+    image: "https://static.tvtropes.org/pmwiki/pub/images/land_before_time10_disneyscreencapscom_5285.jpg",
+    sound: "/roars/Dino.mp3"
   })
 
   const onChange = (e) => {

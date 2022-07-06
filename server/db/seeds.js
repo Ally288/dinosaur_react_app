@@ -99,7 +99,7 @@ db.dinosaurs.insertMany([
         "length": 2, //m
         "found_in": "Mongolia",
         // "image": "https://static.wikia.nocookie.net/landbeforetime/images/7/75/Ruby_infobox.png",
-        "image": "/dinosaurs/Oviraptor.webp",
+        "image": "/dinosaurs/Oviraptor1.webp",
         "sound": "/roars/Oviro.mp3"
     },
     {
