@@ -1,8 +1,8 @@
 import React from "react";
-import {Chart} from "react-google-charts";
+import { Chart } from "react-google-charts";
 import "./ChartContainer.css"
 
-    export const weightData = [
+export const weightData = [
     ["Dinosaur", "KGs"],
     ["Apatosaurus", 19000],
     ["Saurolophus", 1900],
@@ -14,9 +14,9 @@ import "./ChartContainer.css"
     ["Muttaburrasaurus", 2800],
     ["Oviraptor", 20],
     ["Hypsilohodon", 50],
-    ];
+];
 
-    export const lengthData = [
+export const lengthData = [
     ["Dinosaur", "Meters"],
     ["Apatosaurus", 21],
     ["Saurolophus", 9],
@@ -28,62 +28,61 @@ import "./ChartContainer.css"
     ["Muttaburrasaurus", 7],
     ["Oviraptor", 2],
     ["Hypsilohodon", 2.3],
-    ];
+];
 
-    export const dietData = [
+export const dietData = [
     ["Diet Type", "Number"],
     ["Herbivorous", 6],
     ["Carnivorous", 3],
     ["Omnivorous", 1],
-    ];
+];
 
-    export const weightTitle = {
-        chart: {
-            title: "Dinosaur Weight Comparison",
-        },
-    };
+export const weightOptions = {
+    title: "Dinosaur Weight",
+    backgroundColor: 'transparent'
+};
 
-    export const lengthTitle = {
-        chart: {
-            title: "Dinosaur Length Comparison",
-        },
-    };
+export const lengthOptions = {
+    title: "Dinosaur Length Comparison",
+    backgroundColor: 'transparent'
+};
 
-    export const dietTitle ={
-    title: "Diet Types"
-    }
+export const dietTitle = {
+    title: "Diet Types",
+    backgroundColor: 'transparent'
+}
 
-    const ChartContainer = () => {
+const ChartContainer = () => {
     return (
         <>
-        <div className="charts">
-            <div className="weight-chart">
-            <Chart
-            chartType="BarChart"
-            data={weightData}
-            options={{weightTitle}}
-            width={"80%"}
-            height={"400px"}
-            />
-            </div>
-            <div className="length-chart">
-            <Chart
-            chartType="BarChart"
-            data={lengthData}
-            options={{lengthTitle}}
-            width={"80%"}
-            height={"400px"}
-            />
-            </div>
-            <div className="diet-chart">
-            <Chart
-            chartType="PieChart"
-            data={dietData}
-            options={{dietTitle}}
-            width={"80%"}
-            height={"400px"}
-            />
-            </div>
+            <div className="charts">
+                <div className="weight-chart">
+                    <Chart
+                        chartType="BarChart"
+                        data={weightData}
+                        options={weightOptions}
+                        width={"100%"}
+                        height={"400px"}
+                    />
+                </div>
+                <div className="length-chart">
+                    <Chart
+                        chartType="BarChart"
+                        data={lengthData}
+                        options={lengthOptions}
+                        width={"100%"}
+                        height={"400px"}
+                    />
+                </div>
+                <div className="diet-chart">
+                    <Chart
+                        chartType="PieChart"
+                        data={dietData}
+                        options={dietTitle}
+                        width={"100%"}
+                        height={"400px"}
+                    />
+                </div>
             </div>
         </>
     )

@@ -1,33 +1,19 @@
-/* .charts {
-    background-color: transparent;
+.charts {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.weight-chart {
+.weight-chart,
+.length-chart,
+.diet-chart {
     border: 5px;
     border: thin;
     border-color: black;
     border-radius: 5px;
-    margin: 1%;
     padding: 1px;
     height: 50%;
-    width: 60%;
+    width: 100%;
+    margin-top: 20px;
 }
-
-.length-chart {
-    border-radius: 20px;
-    margin: 1%;
-    padding: 10px;
-    height: 50%;
-    width: 44%;
-}
-
-.diet-chart {
-    border-radius: 20px;
-    margin: 1%;
-    padding: 10px;
-    height: 50%;
-    width: 44%;
-} */
