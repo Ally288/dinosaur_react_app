@@ -1,8 +1,9 @@
 import React from "react";
 import {Chart} from "react-google-charts";
+import "./ChartContainer.css"
 
     export const weightData = [
-    ["Dinosaur", "Kilograms"],
+    ["Dinosaur", "KGs"],
     ["Apatosaurus", 19000],
     ["Saurolophus", 1900],
     ["Tyrannosaurus Rex", 7000],
@@ -55,33 +56,35 @@ import {Chart} from "react-google-charts";
     const ChartContainer = () => {
     return (
         <>
-        <div className="weight-chart">
-        <Chart
-        chartType="BarChart"
-        data={weightData}
-        options={{weightTitle}}
-        width={"65%"}
-        height={"400px"}
-        />
-        </div>
-        <div className="length-chart">
-        <Chart
-        chartType="BarChart"
-        data={lengthData}
-        options={{lengthTitle}}
-        width={"65%"}
-        height={"400px"}
-        />
-        </div>
-        <div className="diet-chart">
-        <Chart
-        chartType="PieChart"
-        data={dietData}
-        options={{dietTitle}}
-        width={"65%"}
-        height={"400px"}
-        />
-        </div>
+        <div className="charts">
+            <div className="weight-chart">
+            <Chart
+            chartType="BarChart"
+            data={weightData}
+            options={{weightTitle}}
+            width={"80%"}
+            height={"400px"}
+            />
+            </div>
+            <div className="length-chart">
+            <Chart
+            chartType="BarChart"
+            data={lengthData}
+            options={{lengthTitle}}
+            width={"80%"}
+            height={"400px"}
+            />
+            </div>
+            <div className="diet-chart">
+            <Chart
+            chartType="PieChart"
+            data={dietData}
+            options={{dietTitle}}
+            width={"80%"}
+            height={"400px"}
+            />
+            </div>
+            </div>
         </>
     )
 }
