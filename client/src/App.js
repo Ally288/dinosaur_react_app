@@ -51,13 +51,13 @@ function App() {
         <img className="sound" onClick={() => playSound(soundSrc)} alt="play" src="/images/play.png" />
 
         <div className='asteroid'>
-          <img width="100px" src ={require('../src/static/images/asteroid.png')} alt="asteroid" />
+          <img width="100px" src={require('../src/static/images/asteroid.png')} alt="asteroid" />
         </div>
-        <button onClick={() => playSound(soundSrc)}> 🔉</button>
+
 
         <Header />
         <Buttons addDinosaur={addDinosaur} setFormPopup={setFormPopup} />
-        
+
         <Routes>
           <Route exact path="/" element={<MainContainer />} />
           <Route path="/dinosaurs" element={<FlashCardGridContainer dinosaurs={dinosaurs} setDinosaurs={setDinosaurs} formPopup={formPopup} addDinosaur={addDinosaur} />} />
