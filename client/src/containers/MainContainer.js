@@ -1,7 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './MainContainer.css'
 
 const MainContainer = () => {
+
+    const [flipAlly, setFlipAlly] = useState(false);
+    const [flipIan, setFlipIan] = useState(false);
+    const [flipJonny, setFlipJonny] = useState(false);
+
+
+    const spinAlly = () => {
+        setFlipAlly(!flipAlly)
+    };
+
+    const spinIan = () => {
+        setFlipIan(!flipIan)
+    };
+
+    const spinJonny = () => {
+        setFlipJonny(!flipJonny)
+    };
+
+
 
     return (
 
@@ -19,35 +38,50 @@ const MainContainer = () => {
             </main>
 
             <section className="bio">
-
-                <div className="card">
-                    <img className="dinopic" src="https://i.pinimg.com/originals/55/fb/f1/55fbf1cc965b295912197d4f11ded682.png" alt="Allosaurus" />
-                    <h1>Allosaurus</h1>
-                    <p className="title">Scrum Daddy Ally</p>
-                    <p>Alisdair Sit</p>
-                    <a href="https://www.linkedin.com/in/alisdairsit/"><i className="fa fa-linkedin icon"></i></a>
-                    <a href="https://github.com/Ally288"><i className="fa fa-github icon"></i></a>
-                    <p><button className="biobtn">Spin me</button></p>
+                <div className={`card ${flipAlly ? 'flipally' : ''}`}>
+                    <div className="front">
+                        <img className="dinopic" src="/images/allosaurus.png" alt="Allosaurus" />
+                        <h1>Allosaurus</h1>
+                        <p className="title">Scrum Daddy Ally</p>
+                        <p>Alisdair Sit</p>
+                        <a href="https://www.linkedin.com/in/alisdairsit/"><i className="fa fa-linkedin icon"></i></a>
+                        <a href="https://github.com/Ally288"><i className="fa fa-github icon"></i></a>
+                        <p><button onClick={spinAlly} className="biobtn">Spin me</button></p>
+                    </div>
+                    <div className="back" >
+                        <img className="profpic" src="/images/allypic.png" height="200px" alt="Ally's Picture" />
+                        <p><button onClick={spinAlly} className="biobtn">Spin me</button></p>
+                    </div>
                 </div>
-
-                <div className="card">
-                    <img className="dinopic" src="/images/triceratops.png" alt="Triceratops" />
-                    <h1>Triceratops</h1>
-                    <p className="title">One-eyed Ian</p>
-                    <p>Ian Wlodarczyk</p>
-                    <a href="https://www.linkedin.com/in/ian-wlodarczyk-1578498a/"><i className="fa fa-linkedin icon"></i></a>
-                    <a href="https://github.com/ianflod"><i className="fa fa-github icon"></i></a>
-                    <p><button className="biobtn">Spin me</button></p>
+                <div className={`card ${flipIan ? 'flipian' : ''}`}>
+                    <div className="front">
+                        <img className="dinopic" src="/images/triceratops.png" alt="Triceratops" />
+                        <h1>Triceratops</h1>
+                        <p className="title">One-eyed Ian</p>
+                        <p>Ian Wlodarczyk</p>
+                        <a href="https://www.linkedin.com/in/ian-wlodarczyk-1578498a/"><i className="fa fa-linkedin icon"></i></a>
+                        <a href="https://github.com/ianflod"><i className="fa fa-github icon"></i></a>
+                        <p><button onClick={spinIan} className="biobtn">Spin me</button></p>
+                    </div>
+                    <div className="back">
+                        <img className="profpic" src="/images/ianpic.jpg" height="200px" alt="Ian's Picture" />
+                        <p><button onClick={spinIan} className="biobtn">Spin me</button></p>
+                    </div>
                 </div>
-
-                <div className="card">
-                    <img className="dinopic" src="/images/trex.png" alt="trex" />
-                    <h1>Gigantosaurus</h1>
-                    <p className="title">Big Jonny</p>
-                    <p>Jonny Houdin McAveety</p>
-                    <a href="https://www.linkedin.com/in/jonathan-houdin-mcaveety-392a1153/"><i className="fa fa-linkedin icon"></i></a>
-                    <a href="https://github.com/jonnyhoudini"><i className="fa fa-github icon"></i></a>
-                    <p><button className="biobtn">Spin me</button></p>
+                <div className={`card ${flipJonny ? 'flipjonny' : ''}`}>
+                    <div className="front">
+                        <img className="dinopic" src="/images/trex.png" alt="trex" />
+                        <h1>Gigantosaurus</h1>
+                        <p className="title">Big Jonny</p>
+                        <p>Jonny Houdin McAveety</p>
+                        <a href="https://www.linkedin.com/in/jonathan-houdin-mcaveety-392a1153/"><i className="fa fa-linkedin icon"></i></a>
+                        <a href="https://github.com/jonnyhoudini"><i className="fa fa-github icon"></i></a>
+                        <p><button onClick={spinJonny} className="biobtn">Spin me</button></p>
+                    </div>
+                    <div className="back">
+                        <img className="profpic" src="/images/jonnypic.png" height="200px" alt="Jonny's Picture" />
+                        <p><button onClick={spinJonny} className="biobtn">Spin me</button></p>
+                    </div>
                 </div>
 
             </section>
