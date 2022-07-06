@@ -21,6 +21,7 @@
 }
 
 
+
 .card {
     border: 1px solid lightgray;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -40,7 +41,7 @@
 }
 
 .card.flipally, .card.flipian, .card.flipjonny {
-    --rotate-y: 540deg;
+    --rotate-y: 1260deg;
 }
 
 .card .front,
