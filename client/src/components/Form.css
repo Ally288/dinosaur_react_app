@@ -15,11 +15,41 @@
     padding: 32px;
     width: 100%;
     max-width: 640px;
-    background-color: #FFF;
+    background-color: #D1EFB5;
+    border-radius: 10px;
 }
 
 .popup-inner .close-btn {
     position: absolute;
     top: 16px;
-    right: 16px;
+    right: 25px;
+}
+
+.close {
+    font-size: 45px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
