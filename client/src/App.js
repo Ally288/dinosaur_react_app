@@ -50,13 +50,9 @@ function App() {
 
   return (
     <>
-
     {asteroid ? <div className='dino-container'>
       <Router>
         <img className="sound" onClick={() => playSound(soundSrc)} alt="play" src="/images/play.png" />
-        <div className="asteroid-btn">
-          <button className="toggle-btn" onClick={toggleAsteroid}>Let Nature Take Its Course</button>
-        </div>
         <Header />
         <Buttons addDinosaur={addDinosaur} setFormPopup={setFormPopup} />
         <Routes>
@@ -70,14 +66,35 @@ function App() {
       <Popup trigger={formPopup} setTrigger={setFormPopup}>
         <FlashcardForm setFormPopup={setFormPopup} setDinosaurs={setDinosaurs} addDinosaur={addDinosaur} />
       </Popup>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <div className="btn-frame">
+          <div className='btn-inner-frame'>
+            <button className="toggle-btn-show" onClick={toggleAsteroid}>Let Nature Take Its Course</button>
+          </div>
+        </div>
+
       </div> :
 
     <div className='dino-container'>
-      <button className='toggle-btn' onClick={toggleAsteroid}>Save the Dinosaurs!</button>
+      <button className='toggle-btn-save' onClick={toggleAsteroid}>Save the Dinosaurs!</button>
       <Router>
         <img className="sound" onClick={() => playSound(soundSrc)} alt="play" src="/images/play.png" />
         <div className='asteroid'>
-          <img width="100px" src={require('../src/static/images/asteroid.png')} alt="asteroid" />
+          <img width="100px" src="/images/asteroid.png" alt="asteroid" />
         </div>
         <Header />
         <Buttons addDinosaur={addDinosaur} setFormPopup={setFormPopup} />
