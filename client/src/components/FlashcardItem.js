@@ -50,7 +50,7 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
           {/* </div> */}
         </div>
         <div className='back' >
-
+  
           <h4>Diet: {dinosaur.diet}</h4>
           <h4>Weight: {dinosaur.weight} kg</h4>
           <h4>Length: {dinosaur.length} m</h4>
