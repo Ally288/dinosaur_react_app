@@ -1,0 +1,90 @@
+.about {
+    width: 700px;
+    text-align: center;
+    margin: auto;
+}
+
+.bio {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+.dinopic {
+    height: 200px;
+    width: 100%;
+}
+
+
+
+.card {
+    border: 1px solid lightgray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    height: 500px;
+    border-radius: 1em;
+    margin: 5px;
+    padding: 10px;
+    font-family: arial;
+    transform-style: preserve-3d;
+    transition: 800ms;
+    transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
+}
+
+.card.flipally, .card.flipian, .card.flipjonny {
+    --rotate-y: 1260deg;
+}
+
+.card .front,
+.card .back {
+    position: absolute;
+    padding: 1rem;
+    backface-visibility: hidden;
+}
+
+.card .back {
+    transform: rotateY(180deg);
+}
+
+.profpic {
+    padding: 20px;
+}
+
+.biobtn {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+button:hover,
+a:hover {
+    opacity: 0.7;
+}
+
+
+
+.icon {
+    margin-right: 5px;
+}

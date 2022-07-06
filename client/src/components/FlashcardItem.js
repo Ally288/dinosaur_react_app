@@ -22,15 +22,15 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
     selectDinoToEdit(id);
   }
 
-  // 
+
   const soundSrc = (dinosaur.sound);
-  //  "/Apato.mp3"
+
   const playSound = (src) => {
     const sound = new Howl({ src });
     sound.play();
-    // console.log(sound);
+
   };
-  // html5: true
+
 
   // Inside the edit form use a form useState
   // Default values should be the values of selectedDino
@@ -38,29 +38,32 @@ const FlashcardItem = ({ dinosaur, removeDinosaur, updateDinosaur, selectDinoToE
 
 
   return (
+    <>
 
-    <div
-      className={`dinoItem ${flip ? 'flip' : ''}`}
-      onClick={() => setFlip(!flip)}>
-      <div className="front">
-        <h1>{dinosaur.name}</h1>
-        <div className="icons">
-          <img src={dinosaur.image} alt="dinosaur" width="120px" height="120px" />
+      <div
+        className={`dinoItem ${flip ? 'flip' : ''}`}
+        onClick={() => setFlip(!flip)}>
+        <div className={`front ${flip ? 'absolute' : ''}`}>
+          <h1 className="dinoname">{dinosaur.name}</h1>
+          {/* <div className="icons"> */}
+          <img src={dinosaur.image} alt="dinosaur" width="160px" height="160px" />
+          {/* </div> */}
         </div>
-      </div>
-      <div className='back' >
-        <h2>{dinosaur.diet}</h2>
-        <h4>{dinosaur.weight}</h4>
-        <h4>{dinosaur.length}</h4>
-        <h4>{dinosaur.found_in}</h4>
-        <p>{dinosaur.description}</p>
-        <button onClick={handleDelete}> 🗑 </button>
-        <button onClick={handleEdit} value={dinosaur._id}> Edit</button>
-        <button onClick={() => playSound(soundSrc)}> 🔉</button>
-      </div>
+        <div className='back' >
+  
+          <h4>Diet: {dinosaur.diet}</h4>
+          <h4>Weight: {dinosaur.weight} kg</h4>
+          <h4>Length: {dinosaur.length} m</h4>
+          <h4>Found In: {dinosaur.found_in}</h4>
 
-    </div>
+          <p>{dinosaur.description}</p>
+          <button className="back-buttons" onClick={handleEdit} value={dinosaur._id}> ✍️ Edit</button>
+          <button className="back-buttons" onClick={handleDelete}> ♻️ Delete</button>
+          <button className="back-buttons" onClick={() => playSound(soundSrc)}> 🔉 Roar!</button>
+        </div>
 
+      </div>
+    </>
   )
 }
 
