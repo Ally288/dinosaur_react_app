@@ -44,7 +44,7 @@ db.dinosaurs.insertMany([
         "length": 9.0, //m
         "found_in": "USA",
         // "image": "https://static.wikia.nocookie.net/landbeforetime/images/9/96/Spike_infobox.png",
-        "image": "/dinosaurs/Stegosaurus.webp",       
+        "image": "/dinosaurs/Stegosaurus.webp",
         "sound": "/roars/Stego.mp3"
     },
     {
@@ -60,7 +60,7 @@ db.dinosaurs.insertMany([
     },
     {
         "name": "Pterodactylus",
-        "description": "Became extinct around the same time as dinosaurs but they were actually flying reptiles",
+        "description": "These were not actually dinosaurs but they were actually flying reptiles",
         "diet": "Carnivorous",
         "weight": 50, //kg
         "length": 1.83, //m
