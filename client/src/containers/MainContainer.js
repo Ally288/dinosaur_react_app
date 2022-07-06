@@ -82,7 +82,7 @@ const MainContainer = () => {
                         <p><button onClick={spinJonny} className="biobtn">Spin me</button></p>
                     </div>
                     <div className="back">
-                        <img className="profpic" src="/images/jonnypic.png" height="200px" alt="Jonny's Picture" />
+                        <img className="profpic" src="/images/jonny.jpg" height="200px" alt="Jonny's Picture" />
                         <h1>Jonny Houdin McAveety</h1>
                         <a href="https://www.linkedin.com/in/jonathan-houdin-mcaveety-392a1153/"><i className="fa fa-linkedin icon"></i></a>
                         <a href="https://github.com/jonnyhoudini"><i className="fa fa-github icon"></i></a>
