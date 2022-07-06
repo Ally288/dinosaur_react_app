@@ -29,7 +29,7 @@ body {
 	left: 0;
 	transform: translateX(-120%) translateY(-120%) rotateZ(0);
 	position: fixed;
-	animation-delay: 100s;
+	animation-delay: 1s;
 	z-index: 999999;
 }
 
