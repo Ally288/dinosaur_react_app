@@ -65,12 +65,12 @@ const Quiz = () => {
         <div className="quizContainer">
             <div className='app'>
                 {showScore ? (
-                    <div className='score-section'>You scored {score} out of {questions.length}</div>
+                    <div className='score-section'><p>You scored {score} out of {questions.length}</p></div>
                 ) : (
                     <>
                         <div className='question-section'>
                             <div className='question-count'>
-                                <span>{currentQuestionNumber}</span>/{questions.length}
+                                <span>Question {currentQuestionNumber}</span> of {questions.length}
                             </div>
                             <div className='question-text'>{questions[currentQuestion].questionText}</div>
                         </div>
