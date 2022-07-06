@@ -30,7 +30,7 @@ db.dinosaurs.insertMany([
         "weight": 7000, //kg
         "length": 12.0, //m
         "found_in": "Canada, USA",
-        "image": "https://static.wikia.nocookie.net/landbeforetime/images/d/d3/Chompy.jpg",
+        "image": "https://i.ibb.co/xHFwS6n/sharptooth.png",
         "sound": "/roars/Trex.mp3"
     },
     {
@@ -55,7 +55,7 @@ db.dinosaurs.insertMany([
     },
     {
         "name": "Pterodactylus",
-        "description": "Became extinct around the same time as dinosaurs, however they were not dinosaurs, rather were flying reptiles",
+        "description": "Became extinct around the same time as dinosaurs but they were actually flying reptiles",
         "diet": "Carnivorous",
         "weight": 50, //kg
         "length": 1.83, //m
