@@ -86,7 +86,6 @@ function App() {
             <button className="toggle-btn-show" onClick={toggleAsteroid}>Let Nature Take Its Course</button>
           </div>
         </div>
-
       </div> :
 
     <div className='dino-container'>
@@ -94,7 +93,9 @@ function App() {
       <Router>
         <img className="sound" onClick={() => playSound(soundSrc)} alt="play" src="/images/play.png" />
         <div className='asteroid'>
+          <a href="https://www.google.co.uk">
           <img width="100px" src="/images/asteroid.png" alt="asteroid" />
+          </a>
         </div>
         <Header />
         <Buttons addDinosaur={addDinosaur} setFormPopup={setFormPopup} />
