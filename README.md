@@ -6,9 +6,9 @@ This is Ally, Ian and Jonny's group project for CodeClan.
 
 A web app built using Javascript, communicating with a MongoDB database through express. The front-end is displayed using React.
 
-This web application was a ficticous BBC Educational app designed for kids focussing on our solar system.
+This web application is a ficticous BBC Educational app designed for kids to learn about Dinosaurs.
 
-Featuring Interactive elements along with 3D models, quizzes and audio to help keep them engaged and help them consume their learning.
+Featuring Interactive elements along with Flashcards, quizzes and audio to help keep them engaged and help them consume their learning.
 
 # How to Run
 
